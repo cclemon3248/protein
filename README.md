@@ -1,24 +1,39 @@
-# README
+# <h1>README</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# <h2>開発言語</h2>
 
-Things you may want to cover:
+・Ruby 3.0.1
+・Ruby on Rails 6.0.3
 
-* Ruby version
+# <h2>就業Termの技術</h2>
 
-* System dependencies
+・お気に入り機能
+・devise
 
-* Configuration
+# <h2>カリキュラム外の技術</h2>
 
-* Database creation
+○○○○○○○○○○○○○○○
 
-* Database initialization
+# <h2>実行手順</h2>
 
-* How to run the test suite
+    $ https://github.com/satokofuwa/kiyora.git
+    $ cd protein
+    $ bundle install
+    $ rails db:create && rails db:migrate
+    $ rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+# カタログ設計
 
-* Deployment instructions
+○○○○○○○○○○○○○○○
 
-* ...
+# テーブル定義書
+
+Aaa
+
+# 画面遷移図
+
+Aaa
+
+# ワイヤーフレーム
+
+Aaa
