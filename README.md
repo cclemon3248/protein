@@ -26,11 +26,11 @@
 
 # <h2>カタログ設計</h2>
 
-https://docs.google.com/spreadsheets/d/1dYa7NJg0YysYZa8V0XR7CuPUwK8IkWnYtZwa_dcFmKY/edit?usp=sharing
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTTlMGON6LaGpRdGYl2KZ2c-ifO6kte7baDK_GYa_9_vUrfDvsyDCbmi356jwxP19tgLG9HkOaOEGoD/pubhtml?widget=true&amp;headers=false"></iframe>
 
 # <h2>テーブル定義書</h2>
 
-https://docs.google.com/spreadsheets/d/1dYa7NJg0YysYZa8V0XR7CuPUwK8IkWnYtZwa_dcFmKY/edit?usp=sharing
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTTlMGON6LaGpRdGYl2KZ2c-ifO6kte7baDK_GYa_9_vUrfDvsyDCbmi356jwxP19tgLG9HkOaOEGoD/pubhtml?widget=true&amp;headers=false"></iframe>
 
 # <h2>ワイヤーフレーム</h2>
 
