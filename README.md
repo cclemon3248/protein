@@ -34,11 +34,11 @@ Aaa
 
 # <h2>ER図</h2>
 
-<img src="/Users/cclemon3248/workspace/protein/06031.jpg">
+<img src="06031.jpg">
 
 # <h2>画面遷移図</h2>
 
-<img src="/Users/cclemon3248/workspace/protein/README.md">
+<img src="06032.jpg">
 
 # <h2>ワイヤーフレーム</h2>
 
