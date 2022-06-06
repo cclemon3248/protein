@@ -34,7 +34,7 @@ https://docs.google.com/spreadsheets/d/1dYa7NJg0YysYZa8V0XR7CuPUwK8IkWnYtZwa_dcF
 
 # <h2>ワイヤーフレーム</h2>
 
-https://drive.google.com/file/d/1XEVxfKga5Z-R-zn4df6Tf0ilXX8X3_Hf/view?usp=sharing
+https://drive.google.com/file/d/15DRb_OdrHqPvoApjUI66pW214PQAWXSI/view?usp=sharing
 
 # <h2>ER図</h2>
 
@@ -42,4 +42,4 @@ https://drive.google.com/file/d/1XEVxfKga5Z-R-zn4df6Tf0ilXX8X3_Hf/view?usp=shari
 
 # <h2>画面遷移図</h2>
 
-<img src="06063.jpg">
+<img src="06032.jpg">
