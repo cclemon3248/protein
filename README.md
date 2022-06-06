@@ -42,4 +42,4 @@ https://drive.google.com/file/d/1XEVxfKga5Z-R-zn4df6Tf0ilXX8X3_Hf/view?usp=shari
 
 # <h2>画面遷移図</h2>
 
-<img src="060063.jpg">
+<img src="06063.jpg">
