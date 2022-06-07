@@ -22,7 +22,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @task.image %>
+  <%= image_tag @task.image.url %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
