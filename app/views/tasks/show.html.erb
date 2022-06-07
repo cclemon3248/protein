@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Store:</strong>
   <%= @task.store %>
@@ -22,9 +20,7 @@
 
 <p>
   <strong>Image:</strong>
-  <% if @task.image == true %>
-    <%= image_tag @task.image.url %>
-  <% end %>
+  <%= image_tag @task.image.url if @task.image.url %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
