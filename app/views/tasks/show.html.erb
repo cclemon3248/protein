@@ -22,7 +22,9 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @task.image.url %>
+  <% if @task.image == true %>
+    <%= image_tag @task.image.url %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
