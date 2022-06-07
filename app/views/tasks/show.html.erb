@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @task.store %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<p>
+  <strong>Protein:</strong>
+  <%= @task.protein %>
+</p>
+
+<p>
+  <strong>Calorie:</strong>
+  <%= @task.calorie %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @task.image %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
