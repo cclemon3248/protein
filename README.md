@@ -18,7 +18,7 @@
 
 # <h2>実行手順</h2>
 
-    $ https://github.com/satokofuwa/kiyora.git
+    $ https://github.com/cclemon3248/protein.git
     $ cd protein
     $ bundle install
     $ rails db:create && rails db:migrate
