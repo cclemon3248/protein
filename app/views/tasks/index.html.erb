@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>name</ht>
       <th>Store</th>
       <th>Name</th>
       <th>Protein</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
+        <td><%= task.user.name %></td>
         <td><%= task.store %></td>
         <td><%= task.name %></td>
         <td><%= task.protein %></td>
@@ -25,6 +27,7 @@
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>いいね</td>
       </tr>
     <% end %>
   </tbody>
