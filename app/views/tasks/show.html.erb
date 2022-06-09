@@ -23,5 +23,15 @@
   <%= image_tag @task.image.url if @task.image.url %>
 </p>
 
+<% unless @task.user_id == current_user.id %>
+  <% if @like.present? %>
+    <%= link_to 'いいね解除する', like_path(id: @like.id), method: :delete, class: 'btn btn-danger' %>
+    +<%= @task.likes.count %>
+  <% else %>
+    <%= link_to 'いいねする', likes_path(task_id: @task.id), method: :post, class: 'btn btn-primary' %>
+    +<%= @task.likes.count %>
+  <% end %>
+<% end %>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>

@@ -5,10 +5,12 @@ class TasksController < ApplicationController
   # GET /tasks or /tasks.json
   def index
     @tasks = Task.all
+    @like = current_user.likes
   end
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    @like = current_user.likes.find_by(task_id: @task.id)
   end
 
   # GET /tasks/new
@@ -18,6 +20,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+    redirect_to tasks_path unless current_user.id == @task.user_id
   end
 
   # POST /tasks or /tasks.json

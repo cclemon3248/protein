@@ -24,15 +24,31 @@
         <td><%= task.protein %></td>
         <td><%= task.calorie %></td>
         <td><%= task.image %></td>
+        <td>
+          <% unless task.user_id == current_user.id %>
+            <% like = @like.find_by(task_id: task.id) %>
+            
+            <% if like.present? %> 
+              <%= link_to 'いいね解除する', like_path(id: like.id), method: :delete, class: 'btn btn-danger' %>             
+            <% else %>
+              <%= link_to 'いいねする', likes_path(task_id: task.id), method: :post, class: 'btn btn-primary' %> 
+            <% end %>
+
+            +<%= task.likes.count %>
+          <% end %>
+        </td>
+        
         <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td>いいね</td>
+        
+        <% if current_user.id == task.user_id %>
+          <td><%= link_to 'Edit', edit_task_path(task) %></td>
+          <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
+
     <% end %>
   </tbody>
 </table>
 
 <br>
-
 <%= link_to 'New Task', new_task_path %>
