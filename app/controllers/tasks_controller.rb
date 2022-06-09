@@ -11,6 +11,7 @@ class TasksController < ApplicationController
   # GET /tasks/1 or /tasks/1.json
   def show
     @like = current_user.likes.find_by(task_id: @task.id)
+    @favorite = current_user.favorites.find_by(task_id: @task.id)
   end
 
   # GET /tasks/new
