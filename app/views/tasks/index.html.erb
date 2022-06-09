@@ -25,7 +25,7 @@
         <td><%= task.calorie %></td>
         <td><%= task.image %></td>
         <td>
-
+          <% if current_user %>
           <% unless task.user_id == current_user.id %>
             <% like = Like.find_by(task_id: task.id) %>
             <% if like.present? %> 
@@ -35,8 +35,10 @@
             <% end %>
             +<%= task.likes.count %>
           <% end %>
+          <% end %>
         </td>
         <td>
+        <% if current_user %>
         <% unless task.user_id == current_user.id %>
           <% favorite = Favorite.find_by(task_id: task.id) %>
           <% if favorite.present? %> 
@@ -45,13 +47,15 @@
             <%= link_to 'お気に入り', favorites_path(task_id: task.id), method: :post, class: 'btn btn-primary' %> 
           <% end %>
         <% end %>
+        <% end %>
       </td>
-
-        <td><%= link_to 'Show', task %></td>
+       <td><%= link_to 'Show', task_path(task.id) %></td>
         
+        <% if current_user %>
         <% if current_user.id == task.user_id %>
           <td><%= link_to 'Edit', edit_task_path(task) %></td>
           <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
         <% end %>
       </tr>
     <% end %>
