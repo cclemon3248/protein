@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
   resources :users, only: [:show]
-  resources :tasks
+  resources :tasks do
+    resources :comments 
+  end
   root 'tasks#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :likes, only: [:create, :destroy]
