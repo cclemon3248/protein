@@ -42,5 +42,22 @@
 <% end %>
 
 
+<p>Comments</p>
+<table>
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%= comment.content %></td>
+    <td><%= link_to "削除", task_comment_path(@task, comment), method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= form_with(model: [@task, @comment]) do |f| %>
+  <%= f.text_area :content %><br>
+  <%= f.submit '送信', class: "btn-sm btn-primary" %>
+<% end %>
+
+
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>

@@ -12,6 +12,9 @@ class TasksController < ApplicationController
   def show
     @like = current_user.likes.find_by(task_id: @task.id)
     @favorite = current_user.favorites.find_by(task_id: @task.id)
+    # @task = Task.find(params[:id])
+    @comment = Comment.new
+    @comments = @task.comments
   end
 
   # GET /tasks/new
