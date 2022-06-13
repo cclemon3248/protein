@@ -9,6 +9,7 @@ gem 'devise-i18n'
 gem "rexml"
 gem 'rails_admin', '~> 3.0'
 gem 'cancancan'
+gem "bootstrap_form"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
