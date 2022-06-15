@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :protein
       t.integer :calorie
-      t.string :image
+      t.text :image
 
       t.timestamps
     end

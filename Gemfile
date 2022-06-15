@@ -10,6 +10,7 @@ gem "rexml"
 gem 'rails_admin', '~> 3.0'
 gem 'cancancan'
 gem "bootstrap_form"
+gem 'kaminari'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'

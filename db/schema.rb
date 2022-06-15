@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2022_06_10_164135) do
     t.string "name"
     t.integer "protein"
     t.integer "calorie"
-    t.string "image"
+    t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2022_06_10_164135) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.string "image"
+    t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false

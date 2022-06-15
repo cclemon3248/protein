@@ -24,7 +24,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.inet     :last_sign_in_ip
 
       t.boolean :admin
-      t.string :image
+      t.text :image
 
       ## Confirmable
       # t.string   :confirmation_token
