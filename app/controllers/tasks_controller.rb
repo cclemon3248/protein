@@ -3,6 +3,11 @@ class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
 
   # GET /tasks or /tasks.json
+
+  def top
+
+  end
+  
   def index
     @tasks = Task.all.page(params[:page]).per(9)
     # @like = current_user.likes
@@ -73,6 +78,6 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:store, :name, :protein, :calorie, :image, :image_cache)
+      params.require(:task).permit(:store, :name, :protein, :calorie, :image, :image_cache, :price)
     end
 end

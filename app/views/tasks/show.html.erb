@@ -53,17 +53,17 @@
           </tr>
           <tr>
             <th scope="row">タンパク質</th>
-            <td><%= @task.protein %>g</td>
+            <td><%= @task.protein.to_f %>g</td>
           </tr>
 
           <tr>
           <th scope="row">カロリー</th>
-          <td><%= @task.calorie %>kcal</td>
+          <td><%= @task.calorie.to_f %>kcal</td>
           </tr>
 
         <tr>
         <th scope="row">価格</th>
-        <td>@twitter</td>
+        <td><%= @task.price.to_f %>円</td>
         </tr>
 
 
