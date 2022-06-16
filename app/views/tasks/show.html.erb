@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mx-auto" style="width: 600px">
 <p>
   <strong>Store:</strong>
   <%= @task.store %>
@@ -53,7 +53,7 @@
 <% end %>
 </table>
 
-<%= form_with(model: [@task, @comment]) do |f| %>
+<%= bootstrap_form_with(model: [@task, @comment]) do |f| %>
   <%= f.text_area :content %><br>
   <%= f.submit '送信', class: "btn-sm btn-primary" %>
 <% end %>
