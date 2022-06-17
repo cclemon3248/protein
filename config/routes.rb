@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   get 'tasks/top'
   resources :tasks do
-    resources :comments 
+    resources :comments
+    collection do
+      get "search"
+    end
+
   end
   root 'tasks#top'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

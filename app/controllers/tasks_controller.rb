@@ -4,6 +4,18 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
 
+  def search
+    if params[:task][:store] == "セブンイレブン"
+      @tasks = Task.where(store: "セブンイレブン").page(params[:page]).per(9)
+    elsif params[:task][:store] == "ローソン"
+      @tasks = Task.where(store: "ローソン").page(params[:page]).per(9)
+    elsif params[:task][:store] == "ファミリーマート"
+      @tasks = Task.where(store: "ファミリーマート").page(params[:page]).per(9)
+    else 
+      @tasks = Task.all.page(params[:page]).per(9)
+    end
+  end
+
   def top
 
   end
