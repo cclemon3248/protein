@@ -17,7 +17,7 @@
       <% if @user.image.present? %>
       <%= image_tag @user.image.url, size:'200x200' %>
       <% else %>
-      <img src="/user.jpg" alt="..." class="rounded-lg mb-3">
+      <%= image_tag "user.jpg", width: "200" %>
       <% end %>
       <h3><%= current_user.name %></h3>
       <p><%= current_user.email %></p>
