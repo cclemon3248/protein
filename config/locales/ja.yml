@@ -1,5 +1,17 @@
 ja:
   activerecord:
-  errors:
-    messages:
-      record_invalid: "バリデーションに失敗しました: %{errors}"
+    attributes:
+      user:
+        name: ユーザー名
+        email: メール
+        password: パスワード
+        password_confirmation: パスワード（確認）
+      task:
+        store: コンビニ名
+        name: 商品名
+        protein: タンパク質量
+        calorie: カロリー
+        price: 値段
+        image: 画像
+      comment:
+        content: コメント

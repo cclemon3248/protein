@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create!(name: "tom", email: "cclemon3002@yahoo.co.jp", password: "abcdefg1", image: File.open('app/assets/images/AdobeStock_213713637-1-scaled.webp'))
