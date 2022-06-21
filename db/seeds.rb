@@ -15,5 +15,5 @@ Task.create!(
   protein: 21.6, 
   calorie: 586, 
   price: 430, 
-  image: File.open("app/assets/images/user.jpg")
+  image: File.open("user.jpg")
 )
