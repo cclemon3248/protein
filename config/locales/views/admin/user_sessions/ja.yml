@@ -1,7 +1,0 @@
-ja:
-  devise:
-    sessions:
-      new:
-        email: 'Eメール'
-        password: "パスワード"
-        Remember me: "記憶する"
