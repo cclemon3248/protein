@@ -5,4 +5,9 @@ class Task < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
+  validates :store, presence: true
+  validates :name, presence: true
+  validates :protein, presence: true
+  validates :calorie, presence: true
+  validates :price, presence: true
 end
