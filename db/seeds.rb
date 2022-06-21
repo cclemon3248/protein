@@ -1,5 +1,3 @@
-User.create!(name: "ジュノ", email: "cclemon3248@gmail.com", password: "password1", admin: true)
-
 10.times do |n|
   name = Faker::Games::Pokemon.name
   email = Faker::Internet.email
