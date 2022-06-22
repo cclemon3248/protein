@@ -14,6 +14,7 @@ gem 'kaminari'
 gem 'rails-i18n'
 gem 'faker'
 gem "fog-aws"
+gem 'dotenv-rails' ##追記
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
