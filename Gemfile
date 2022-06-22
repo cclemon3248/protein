@@ -13,6 +13,7 @@ gem "bootstrap_form"
 gem 'kaminari'
 gem 'rails-i18n'
 gem 'faker'
+gem "fog-aws"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
