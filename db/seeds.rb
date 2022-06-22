@@ -1,9 +1,9 @@
 Task.create!(
   user_id: 1, 
-  store: "ローソン", 
-  name: "ねぎ塩豚カルビ弁当(もち麦入りご飯)", 
-  protein: 21.6, 
-  calorie: 586, 
-  price: 430, 
-  image: File.open("./public/lawson/6001.png")
+  store: "セブンイレブン", 
+  name:"たんぱく質が摂れる豚レバー", 
+  protein: 39.9, 
+  calorie: 371, 
+  price: 343.44, 
+  image: File.open("./public/seven/7001.jpg")
 )
