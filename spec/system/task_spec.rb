@@ -1,23 +1,31 @@
 require 'rails_helper'
-RSpec.describe 'タスク管理機能', type: :system do
-  describe '新規作成機能' do
-    context 'タスクを新規作成した場合' do
-      it '作成したタスクが表示される' do
-      end
-    end
-  end
-  describe '一覧表示機能' do
-    context '一覧画面に遷移した場合' do
-      it '作成済みのタスク一覧が表示される' do
+RSpec.describe 'テスト', type: :system do
+  
+  describe 'タスクのCRUD機能テスト' do
 
-      end
-    end
-  end
-  describe '詳細表示機能' do
-     context '任意のタスク詳細画面に遷移した場合' do
-       it '該当タスクの内容が表示される' do
+    it 'タスク作成' do
+      visit new_user_session_path
+      click_link 'ゲストログイン'
+      visit new_task_path
+      select "ローソン", from: "task_store"
+      fill_in "商品名", with: 1
+      fill_in "タンパク質量", with: 1
+      fill_in "カロリー", with: 1
+      fill_in "値段", with: 1
+      attach_file '画像', "#{Rails.root}/public/lawson/6001.png"
+      binding.irb
+      # click_button "タスクを登録する"
 
-       end
-     end
+    end
+
+    it 'タスク詳細' do
+    end
+
+    it 'タスク編集' do
+    end
+
+    it 'タスク削除' do
+    end
+
   end
 end
