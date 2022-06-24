@@ -15,6 +15,10 @@ gem 'rails-i18n'
 gem 'faker'
 gem "fog-aws"
 gem 'dotenv-rails' ##追記
+gem 'rspec-rails'
+gem 'spring-commands-rspec'
+gem 'factory_bot_rails'
+gem 'launchy'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
