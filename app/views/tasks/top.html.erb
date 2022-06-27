@@ -1,9 +1,23 @@
-<div class="container text-center mt-5">
-  <a href="/tasks"><%= image_tag "AdobeStock_213713637-1-scaled.webp", width: "600" %></a>
-  <h1 class="mb-4 mt-4">プロティン!</h1>
-  <h3>ダイエット中に接収すべきタンパク質が豊富な<br>
-  商品を手軽に調べられるアプリです。<br>
-  コンビニに売っている商品をメインに紹介します。</h3>
-  <h2 class="pt-4"><%= link_to "入る", tasks_path, class: "btn btn-primary" %> | <%= link_to "出る", "https://www.yahoo.co.jp/", class: "btn btn-primary" %></h2>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-8">
+      <h1 class="mb-4 mt-4 pl-4">プロティンでタンパク質をとろう!</h1>
+      <h4 class="pl-5">ダイエット中に接収すべきタンパク質が
+      <br>豊富な商品を手軽に調べられるアプリです。
+      <br>コンビニに売っている商品をメインにしています。</h4>
+      <div class="mt-5 ml-5">
+        <%= link_to "はじめる", tasks_path, class: "btn btn-primary btn-lg" %>
+        <%= link_to "ログイン", new_user_session_path, class: "btn btn-light btn-lg ml-3" %>
+      </div>
+      <div class="d-flex mt-3">
+      <p class="pl-5 font-weight-bold mr-3">v0.0.0</p>
+      <p>今までのリリース</p>
+      </div>
+    </div>
+
+    <div class="col-4">
+    <a href="/tasks"><%= image_tag "AdobeStock_213713637-1-scaled.webp", width: "400" %></a>
+    </div>
+  </div>
 </div>
 

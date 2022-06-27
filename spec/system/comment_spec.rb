@@ -20,12 +20,5 @@ RSpec.describe 'テスト', type: :system do
       click_button "コメントを投稿する"
       expect(page).to have_content 'qwerty'
     end
-
-    it 'コメントが空白' do
-      fill_in "コメント", with: ""
-      click_button "コメントを投稿する"
-      @comment = Comment.all[0]
-      expect(@comment).to eq nil
-    end
   end
 end
