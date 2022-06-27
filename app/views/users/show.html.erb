@@ -1,0 +1,52 @@
+<div class="container mt-5">
+<header class="border-bottom pb-2 mb-3 d-flex align-items-center">
+<h2 class="m-0">ユーザー情報</h1>
+
+<a href="/users/edit" class="ml-auto bi">
+<button type="button" class="btn btn-primary">
+  <i class="bi bi-person-plus-fill mr-1"></i>
+  プロフィール編集
+</button>
+</a>
+</header>
+
+
+<section class="row">
+  <section class="col-lg-3 border-right">
+    <div class="aaa">
+      <% if @user.image.present? %>
+      <%= image_tag @user.image.url, size:'200x200' %>
+      <% else %>
+      <%= image_tag "user.jpg", width: "200" %>
+      <% end %>
+      <h3><%= current_user.name %></h3>
+      <p><%= current_user.email %></p>
+      <a href="/users/edit">
+      <button type="button" class="btn btn-primary" >
+        <i class="bi bi-person-plus-fill mr-1"></i>
+        編集
+      </button>
+      </a>
+    </div>
+  </section>
+
+  <section class="col-md-9">
+    <header class="border-bottom pb-2 mb-3">
+      <h3 class="m-0 ml-3 mt-3">お気に入り</h1>
+    </header>
+    <section class="row">
+      <% @favorites.each do |favorite| %>
+      <div class="card ml-5 mt-2 mb-5" style="width: 18rem;">
+      <%= image_tag favorite.task.image.url %>
+     <title><%= favorite.task.name %></title>
+      <div class="card-body">
+        <h5 class="card-title"><%= favorite.task.name %></h5>
+        <button type="button" class="btn btn-sm btn-outline-secondary" src="/task"><%= link_to '見る', task_path(favorite.task.id) %></button>
+      </div>
+      </div>
+
+      <% end %>
+    </section>
+  </section>
+</section>
+</div>

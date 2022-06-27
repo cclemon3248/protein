@@ -1,0 +1,42 @@
+<div class="container mx-auto" style="width: 600px">
+
+<header class="border-bottom pb-2 mb-5 mt-5">
+<h2><%= t('.sign_in') %></h2>
+</header>
+
+<%= bootstrap_form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+  <div class="field">
+  
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力してください" %>
+  </div>
+
+  <div class="field">
+  
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワードを入力してください" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+     
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <br>
+    <%= f.submit t('.sign_in'), class: "form-control btn-sm btn-primary" %>
+    <br>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+<div class="mt-2">
+<%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "form-control btn-sm btn-primary text-center bg-info" %>
+</div>
+
+<div class="mt-4">
+<%= link_to 'ゲスト管理人ログイン', users_admin_sign_in_path, method: :post, class: "form-control btn-sm btn-primary text-center bg-info" %>
+</div>
+
+</div>

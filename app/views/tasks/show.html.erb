@@ -1,0 +1,124 @@
+<div class="container mx-auto" style="width: 900px">
+
+  <header class="border-bottom pb-2 mt-5 d-flex">
+    <h2 class="m-0">商品詳細</h2>
+    <div class="ml-auto d-flex">
+    <% unless @task.user_id == current_user.id %>
+    <% if @like.present? %>
+      <%= link_to like_path(id: @like.id), method: :delete do %>
+        <h3><i class="bi bi-heart-fill bi-lg"><%= @task.likes.count %></i></h3>
+      <% end %>
+    <% else %>
+      <%= link_to likes_path(task_id: @task.id), method: :post do %>
+        <h3><i class="bi bi-heart"><%= @task.likes.count %></i></h3>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <% unless @task.user_id == current_user.id %>
+  <% if @favorite.present? %>
+    <%= link_to favorite_path(id: @favorite.id), method: :delete do %>
+      <h3><i class="bi bi-star-fill pl-2"></i></h3>
+    <% end %>
+  <% else %>
+    <%= link_to favorites_path(task_id: @task.id), method: :post do %>
+      <h3><i class="bi bi-star pl-2"></i></h3>
+    <% end %>
+  <% end %>
+  <% end %>
+  </div>
+  </header>
+
+  <div class="card mb-3 mt-5" style="max-width: 900px;">
+    <div class="row no-gutters">
+      <div class="col-md-4 border-right">
+      <div class="d-block mx-auto">
+      <%= image_tag @task.image.url, size:'300x300' %>
+      </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+        <table class="table table-bordered">
+        
+        <tbody>
+          <tr>
+            <th scope="row">商品名</th>
+            <td><%= @task.name %></td>
+
+          </tr>
+          <tr>
+            <th scope="row">コンビニ名</th>
+            <td><%= @task.store %></td>
+
+          </tr>
+          <tr>
+            <th scope="row">タンパク質</th>
+            <td><%= @task.protein.to_f %>g</td>
+          </tr>
+
+          <tr>
+          <th scope="row">カロリー</th>
+          <td><%= @task.calorie.to_f %>kcal</td>
+          </tr>
+
+        <tr>
+        <th scope="row">価格</th>
+        <td><%= @task.price.to_f %>円</td>
+        </tr>
+
+
+        </tbody>
+      </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="border-bottom pb-2 mb-5 mt-5">
+  <h2 class="m-0">コメント一覧</h1>
+  </header>
+
+
+
+
+<% count = 1 %>
+<% @comments.each do |comment| %>
+<div class="card">
+  <div class="card-body">
+    
+  <table>
+
+    <tr>
+      <td>
+        <%= count %>. <%= User.find(comment.user_id).name %>
+        <%= comment.created_at.strftime("%Y-%m-%d %H:%M") %>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt-2"><h4><%= comment.content %></h4></td>
+    </tr>
+    <tr>
+      <td>
+        <% if current_user.id == comment.user_id %>
+        <%= link_to '削除', task_comment_path(comment.id), method: :delete %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+
+  </div>
+</div>
+<% count += 1 %>
+<% end %>
+
+<div class="mt-5">
+<%= bootstrap_form_with(model: [@task, @comment]) do |f| %>
+  <%= f.text_area :content %><br>
+  <%= f.submit 'コメントを投稿する' , class: "form-control btn-sm btn-primary" %>
+<% end %>
+</div>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
+</div>

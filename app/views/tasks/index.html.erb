@@ -1,0 +1,46 @@
+
+
+
+<div class="container mt-5">
+
+<header class="border-bottom pb-2 mb-5 d-flex">
+  <h2 class="m-0">商品一覧</h1>
+  <div class="ml-auto">
+    <%= form_with scope: :task, url:search_tasks_path, local: true, method: "get" do |form| %>
+      <%= form.select :store, ["セブンイレブン", "ローソン", "ファミリーマート"],  { include_blank: "コンビニ" } %>
+      <%= form.submit "検索" %>
+    <% end %>
+  </div>
+
+</header>
+
+  <div class="row">
+    <% @tasks.each do |task| %>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+        <%= image_tag task.image.url %>
+          <div class="card-body border-bottom">
+            <p class="card-text">
+              <%= task.name %>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group ml-auto">
+                <button type="button" class="btn btn-sm btn-outline-secondary" src="/task"><%= link_to '見る', task_path(task.id) %></button>
+                <% if current_user %>
+                  <% if current_user.id == task.user_id %>
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to '編集', edit_task_path(task) %></button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to '削除', task, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+    <div class="mx-auto mt-3">
+    <%= paginate @tasks %>
+    </div>
+  </div>
+</div>

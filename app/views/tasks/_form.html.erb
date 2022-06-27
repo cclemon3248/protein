@@ -1,0 +1,48 @@
+
+<%= bootstrap_form_with(model: task, local: true) do |form| %>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <p><%= pluralize(task.errors.count, "エラー") %></p>
+      <ul>
+        <% task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.select :store, ["ファミリーマート", "ローソン", "セブンイレブン"], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+   
+    <%= form.text_field :name, placeholder: "商品名を記入してください" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.number_field :protein, step: "0.1", placeholder: "タンパク質を記入してください" %>
+  </div>
+
+  <div class="field">
+  
+    <%= form.number_field :calorie, step: "0.1", placeholder: "カロリーを記入してください" %>
+  </div>
+
+  <div class="field">
+    <%= form.number_field :price, step: "0.1", placeholder: "価格を記入してください" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.file_field :image %>
+  </div>
+
+
+
+  <div class="actions">
+    <br>
+    <%= form.submit "タスクを登録する", class: "form-control btn-sm btn-primary"%>
+  </div>
+  <% end %>
