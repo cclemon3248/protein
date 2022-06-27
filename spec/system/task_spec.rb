@@ -1,8 +1,10 @@
 require 'rails_helper'
 RSpec.describe 'テスト', type: :system do
   describe 'タスクのCRUD機能テスト' do
-    task1 = FactoryBot.create(:task)
-
+    before do
+      user1 = FactoryBot.create(:user)
+      task1 = FactoryBot.create(:task, user_id: user1.id)
+    end
     it 'タスク作成' do
       visit new_user_session_path
       click_link 'ゲストログイン'
