@@ -13,7 +13,6 @@ describe 'お気に入りモデル機能', type: :model do
     it 'タスクーidが空白' do
       @favorite = Favorite.new(user_id: user1.id, task_id: "")
       @favorite.valid?
-      binding.irb
       expect(@favorite.valid?).to eq(false)
     end
   end
