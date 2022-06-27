@@ -19,7 +19,7 @@
       <% else %>
       <%= image_tag "user.jpg", width: "200" %>
       <% end %>
-      <h3><%= current_user.name %></h3>
+      <h3 class="pt-3"><%= current_user.name %></h3>
       <p><%= current_user.email %></p>
       <a href="/users/edit">
       <button type="button" class="btn btn-primary" >
