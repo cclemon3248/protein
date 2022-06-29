@@ -16,8 +16,9 @@
   
 
     <header>
+    <div class="mb-3 container"><a href="/tasks"><%= image_tag "top3.png", width: "340", class: "d-block mx-auto" %></a></div>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <a class="navbar-brand" href="/">プロティン</a>
+    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,7 +46,7 @@
     </div>
     <% else %>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav d-flex">
         <li class="nav-item active">
           <a class="nav-link" href="/users/sign_up">新規登録<span class="sr-only">(current)</span></a>
         </li>
@@ -55,10 +56,9 @@
       </ul>
     </div>
     <% end %>
-
-
   </nav>
-    </header>
+</header>
+
     <% if notice %>
       <p class="alert alert-notice"><%= notice %></p>
     <% end %>
